@@ -1,36 +1,25 @@
 {
   "name": "vite-plugin-hydroxide",
-  "files": [
-    "package.json",
-    "readme.md",
-    "dist"
-  ],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Vite Integration for Hydroxide Framework",
-  "main": "dist/build-cjs.js",
-  "module": "dist/build-esm.js",
+  "type": "module",
+  "author": "Manan Tank",
+  "license": "MIT",
+  "main": "dist/build.cjs",
+  "module": "dist/build.mjs",
   "types": "dist/types/index.d.ts",
   "exports": {
     "types": "./dist/types/index.d.ts",
-    "import": "./dist/build-esm.js",
-    "node": "./dist/build-cjs.js",
-    "default": "./dist/build-cjs.js",
-    "require": "./dist/build-cjs.js"
+    "import": "./dist/build.mjs",
+    "node": "./dist/build.cjs",
+    "default": "./dist/build.cjs",
+    "require": "./dist/build.cjs"
   },
   "scripts": {
     "build": "rollup -c && tsc --emitDeclarationOnly",
     "dev": "rollup -c -w",
     "prepublishOnly": "npm run build"
   },
-  "keywords": [
-    "vite",
-    "vitejs",
-    "vite plugin",
-    "vite-plugin",
-    "hydroxide"
-  ],
-  "author": "Manan Tank",
-  "license": "MIT",
   "devDependencies": {
     "@babel/preset-env": "^7.18.6",
     "@rollup/plugin-babel": "^5.3.1",
@@ -51,5 +40,17 @@
   },
   "peerDependencies": {
     "vite": "^2.9.14"
-  }
+  },
+  "files": [
+    "package.json",
+    "readme.md",
+    "dist"
+  ],
+  "keywords": [
+    "vite",
+    "vitejs",
+    "vite plugin",
+    "vite-plugin",
+    "hydroxide"
+  ]
 }

@@ -14,11 +14,11 @@ const config = {
 	output: [
 		{
 			format: 'esm',
-			file: 'dist/build-esm.js',
+			file: 'dist/build.mjs',
 		},
 		{
 			format: 'cjs',
-			file: 'dist/build-cjs.js',
+			file: 'dist/build.cjs',
 			exports: 'default',
 		},
 	],
